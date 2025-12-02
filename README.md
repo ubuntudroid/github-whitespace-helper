@@ -32,7 +32,7 @@ Coming soon!
 
 ## Usage
 
-![Extension Popup](screenshot.png)
+![Extension Popup](extension-screenshot.png)
 
 1. Navigate to any GitHub PR page
 2. Click the extension icon in your browser toolbar
