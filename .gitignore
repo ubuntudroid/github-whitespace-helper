@@ -1,0 +1,7 @@
+# Exclude sensitive files
+*.pem
+*.crx
+
+# Common ignore patterns
+.DS_Store
+Thumbs.db

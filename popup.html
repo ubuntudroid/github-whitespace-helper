@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Whitespace Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GitHub Whitespace Helper</h1>
+      <p>Configure repositories to automatically hide whitespace in PRs</p>
+    </header>
+    
+    <main>
+      <div class="current-repo">
+        <h3>Current Repository</h3>
+        <div id="current-repo-info">
+          <span id="current-repo-name">Not on a GitHub PR page</span>
+          <label class="toggle">
+            <input type="checkbox" id="current-repo-toggle">
+            <span class="slider"></span>
+            <span class="label">Hide whitespace</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="configured-repos">
+        <h3>Configured Repositories</h3>
+        <div id="repos-list">
+          <p class="empty-state">No repositories configured yet</p>
+        </div>
+      </div>
+      
+      <div class="add-repo">
+        <h3>Add Repository</h3>
+        <div class="input-group">
+          <input type="text" id="repo-input" placeholder="owner/repository (e.g., facebook/react)">
+          <button id="add-repo-btn">Add</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* GitHub Whitespace Helper - Popup Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292f;
+  background: #ffffff;
+  width: 400px;
+  min-height: 500px;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #d1d9e0;
+  padding-bottom: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0969da;
+  margin-bottom: 4px;
+}
+
+header p {
+  font-size: 12px;
+  color: #656d76;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #24292f;
+  margin-bottom: 12px;
+}
+
+/* Current Repository Section */
+.current-repo {
+  background: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+#current-repo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#current-repo-name {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+  color: #656d76;
+  flex: 1;
+}
+
+/* Configured Repositories Section */
+.configured-repos {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#repos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+}
+
+.repo-name {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+  color: #24292f;
+  flex: 1;
+}
+
+.repo-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #656d76;
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+/* Add Repository Section */
+.add-repo {
+  border-top: 1px solid #d1d9e0;
+  padding-top: 16px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+#repo-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+#repo-input:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 2px rgba(9, 105, 218, 0.2);
+}
+
+#add-repo-btn {
+  padding: 6px 12px;
+  background: #0969da;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#add-repo-btn:hover {
+  background: #0860ca;
+}
+
+#add-repo-btn:active {
+  background: #0757ba;
+}
+
+/* Toggle Switch */
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.toggle input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  width: 32px;
+  height: 16px;
+  background: #d1d9e0;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle input[type="checkbox"]:checked + .slider {
+  background: #0969da;
+}
+
+.toggle input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.toggle input[type="checkbox"]:disabled + .slider {
+  background: #e1e4e8;
+  cursor: not-allowed;
+}
+
+.toggle .label {
+  font-size: 12px;
+  color: #656d76;
+}
+
+/* Remove Button */
+.remove-btn {
+  padding: 4px 8px;
+  background: #da3633;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background: #cb2d2a;
+}
+
+/* Message Toast */
+.message {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.message.success {
+  background: #1f883d;
+  color: white;
+}
+
+.message.error {
+  background: #da3633;
+  color: white;
+}
+
+.message.info {
+  background: #0969da;
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar styling */
+#repos-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#repos-list::-webkit-scrollbar-track {
+  background: #f6f8fa;
+  border-radius: 3px;
+}
+
+#repos-list::-webkit-scrollbar-thumb {
+  background: #d1d9e0;
+  border-radius: 3px;
+}
+
+#repos-list::-webkit-scrollbar-thumb:hover {
+  background: #afb8c1;
+}

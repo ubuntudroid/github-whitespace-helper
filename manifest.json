@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Whitespace Helper",
+  "version": "1.0.0",
+  "description": "Automatically enables hiding whitespaces in GitHub PRs for configurable repositories",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://github.com/*/pull/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/pull/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GitHub Whitespace Helper"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
