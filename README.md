@@ -32,6 +32,8 @@ Coming soon!
 
 ## Usage
 
+![Extension Popup](screenshot.png)
+
 1. Navigate to any GitHub PR page
 2. Click the extension icon in your browser toolbar
 3. Toggle repositories to automatically hide whitespace
