@@ -2,7 +2,7 @@
 
 A Chrome extension that automatically enables hiding whitespaces in GitHub PRs for configurable repositories.
 
-**Disclaimer**: This extension is not affiliated with, endorsed by, or officially supported by GitHub, Inc. It is an independently developed third-party extension.
+**Disclaimer**: This extension is not affiliated with, endorsed by, or officially supported by GitHub, Inc. It is an independently developed third-party Chrome extension.
 
 ## Installation
 
@@ -28,9 +28,6 @@ A Chrome extension that automatically enables hiding whitespaces in GitHub PRs f
    - `github-whitespace-helper.pem` (private key - save this!)
 
 **Important**: Save the `.pem` file - you'll need it to update the extension later. Don't share the `.pem` file as it's your private signing key.
-
-### Chrome Web Store:
-Coming soon!
 
 ## Usage
 
