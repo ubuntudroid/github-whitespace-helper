@@ -2,6 +2,8 @@
 
 A Chrome extension that automatically enables hiding whitespaces in GitHub PRs for configurable repositories.
 
+**Disclaimer**: This extension is not affiliated with, endorsed by, or officially supported by GitHub, Inc. It is an independently developed third-party extension.
+
 ## Installation
 
 ### Option 1: CRX File (Recommended)
